@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "jameshowelldev",
+  "builds": [
+    {
+      "src": "web/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "web/public" }
+    }
+  ],
+  "alias": ["jameshowelldev.now.sh"]
+}
