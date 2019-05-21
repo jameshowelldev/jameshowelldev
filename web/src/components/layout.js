@@ -1,41 +1,56 @@
 import React from 'react'
 import Header from './header'
+import Footer from './footer'
+import styled, { createGlobalStyle } from 'styled-components'
 
-import '../styles/layout.css'
-import styles from './layout.module.css'
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --sitePadding: 12px;
+  }
 
-const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitle }) => (
+  body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #ccc;
+    font-size: 18px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  pre {
+    overflow: scroll;
+  }
+
+  @media screen and (min-width:768px) {
+    :root {
+      --sitePadding: 24px;
+    }
+  }
+`
+const StyledPageGrid = styled.div`
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+`
+
+const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
-    <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
-    <div className={styles.content}>{children}</div>
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.companyAddress}>
-          {companyInfo && (
-            <div>
-              {companyInfo.name}
-              <br />
-              {companyInfo.address1}
-              <br />
-              {companyInfo.address2 && (
-                <span>
-                  {companyInfo.address2}
-                  <br />
-                </span>
-              )}
-              {companyInfo.zipCode} {companyInfo.city}
-              {companyInfo.country && <span>, {companyInfo.country}</span>}
-            </div>
-          )}
-        </div>
-
-        <div className={styles.siteInfo}>
-          © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a> &amp;
-          {` `}
-          <a href='https://www.gatsbyjs.org'>Gatsby</a>
-        </div>
-      </div>
-    </footer>
+    <GlobalStyle />
+    <StyledPageGrid>
+      <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+      <div>{children}</div>
+      <Footer>Footer</Footer>
+    </StyledPageGrid>
   </>
 )
 

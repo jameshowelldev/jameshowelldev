@@ -75,10 +75,6 @@ export default {
     },
     {
       type: 'slideshow'
-    },
-    {
-      title: 'Code Snippet',
-      type: 'code'
     }
   ]
 }

@@ -46,7 +46,7 @@ npm install
 # Install or upgrade the Sanity CLI to
 # make sure you are on v0.140.0 or higher
 npm install -g @sanity/cli
-# Set up Sanity,io account and project (≈ 45s)
+# Set up Sanity.io account and project (≈ 45s)
 npm run init
 
 ```
@@ -77,7 +77,7 @@ We tried to strike a balance between a useful example and a minimal footprint to
 
 ```sh
 npm start
-# Studio at http://localhost:3000
+# Studio at http://localhost:3333
 # Web frontend at http://localhost:8000
 # GraphiQL explorer at http://localhost:8000/___graphql
 ```
@@ -109,7 +109,7 @@ npm run now-deploy
 
 > **Deploy on Netlify:** If you want to deploy the Gatsby site to Netlify we added a netlify.toml config for you.
 >
-> Fork or clone the example to your GitHub account. After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a [webhook](link-to-the-doc) to get deploys on content changes.
+> Fork or clone the example to your GitHub account. After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a [webhook](https://www.sanity.io/docs/webhooks) to get deploys on content changes.
 
 ## Contributing
 

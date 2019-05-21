@@ -1,40 +1,42 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Icon from './icons'
-import { cn } from '../lib/helpers'
-import logo from '../images/logo.svg'
-
-import styles from './header.module.css'
+import Nav from './nav'
+import styled from 'styled-components'
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <h1 className={styles.branding}>
-        <Link to='/' title={siteTitle}><img src={logo} /></Link>
-      </h1>
-
-      <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-        <Icon symbol='hamburger' />
-      </button>
-
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
-        <ul>
-          <li>
-            <Link to='/about/'>About</Link>
-          </li>
-          <li>
-            <Link to='/projects/'>Projects</Link>
-          </li>
-          <li>
-            <Link to='/blog/'>Blog</Link>
-          </li>
-          <li>
-            <Link to='/contact/'>Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <StyledHeader>
+    <StyledLogoLink to='/' title={siteTitle}>
+      <Icon symbol='logo' />
+    </StyledLogoLink>
+    <StyledNavToggleButton onClick={showNav ? onHideNav : onShowNav}>
+      <Icon symbol='hamburger' />
+    </StyledNavToggleButton>
+    <Nav />
+  </StyledHeader>
 )
+
+const StyledNavToggleButton = styled.button`
+  display: none;
+`
+
+const StyledLogoLink = styled(Link)`
+  display: inline-block;
+`
+
+const StyledHeader = styled.header`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    padding: 24px;
+  }
+`
 
 export default Header

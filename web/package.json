@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "example-company-website-gatsby-sanity-combo-frontend",
+  "name": "jameshowelldev-frontend",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "James Howell <me@jameshowell.dev>",
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run now-deploy",
@@ -16,17 +16,22 @@
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.6",
     "@sanity/image-url": "^0.140.0",
+    "babel-plugin-styled-components": "^1.10.0",
     "date-fns": "^1.30.1",
     "dotenv": "^6.2.0",
-    "gatsby": "^2.0.76",
+    "gatsby": "^2.5.4",
     "gatsby-plugin-postcss": "^2.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-source-sanity": "^1.0.3",
+    "gatsby-plugin-react-svg": "^2.1.1",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-sanity": "^4.0.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.5.0",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^5.11.1",

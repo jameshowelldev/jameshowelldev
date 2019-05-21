@@ -7,6 +7,7 @@ require('dotenv').config()
 module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
+    `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',
@@ -18,6 +19,14 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
         watchMode: true,
         overlayDrafts: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Raleway']
+        }
       }
     }
   ]
