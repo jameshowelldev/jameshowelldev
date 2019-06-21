@@ -121,26 +121,31 @@ function BlogPost (props) {
     }
   `
 
+  const StyledMainImage = styled.img`
+    max-width: 100%;
+  `
+
   return (
     <article>
-      {mainImage && mainImage.asset && (
-        <StyledArticleInfo>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
-              .fit('crop')
-              .url()}
-            alt={mainImage.alt}
-          />
-        </StyledArticleInfo>
-      )}
       <StyledBlogPostContainer>
         <StyledMainWithSidebar>
           <StyledArticleTitle>
             <StyledBlogPostH1>{title}</StyledBlogPostH1>
           </StyledArticleTitle>
           <StyledMain>
+            {mainImage && mainImage.asset && (
+              <StyledArticleInfo>
+                <StyledMainImage
+                  src={imageUrlFor(buildImageObj(mainImage))
+                    .width(1200)
+                    .height(Math.floor((9 / 16) * 1200))
+                    .fit('crop')
+                    .url()}
+                  alt={mainImage.alt}
+                />
+              </StyledArticleInfo>
+            )}
+
             {_rawBody && <BlockContent blocks={_rawBody} />}
           </StyledMain>
           <StyledArticleMeta>
