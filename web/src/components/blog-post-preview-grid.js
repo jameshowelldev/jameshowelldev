@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import BlogPostPreview from './blog-post-preview'
+import BlogPostList from './blog-post-list'
 
 function BlogPostPreviewGrid (props) {
   return (
@@ -14,14 +14,9 @@ function BlogPostPreviewGrid (props) {
           )}
         </h2>
       )}
-      <ul>
-        {props.nodes &&
-          props.nodes.map(node => (
-            <li key={node.id}>
-              <BlogPostPreview {...node} />
-            </li>
-          ))}
-      </ul>
+
+      {props.nodes && <BlogPostList posts={props.nodes} />}
+
       {props.browseMoreHref && (
         <div>
           <Link to={props.browseMoreHref}>Browse more</Link>

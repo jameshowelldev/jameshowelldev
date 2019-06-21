@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 0;
   }
 
+  img{
+    max-width: 100%;
+  }
+
   pre {
     overflow: scroll;
   }

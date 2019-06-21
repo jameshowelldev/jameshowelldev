@@ -47,6 +47,12 @@ export default {
       of: [{ type: 'reference', to: { type: 'category' } }]
     },
     {
+      name: 'relatedPosts',
+      title: 'Related Posts',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'post' } }]
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent'

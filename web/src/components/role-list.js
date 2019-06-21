@@ -17,26 +17,24 @@ const StyledRoleList = styled.div``
 function RoleList ({ items, title }) {
   return (
     <StyledRoleList>
-      <ul>
-        {items.map(item => (
-          <li key={item._key}>
-            {item.person && item.person.image && item.person.image.asset && (
-              <StyledAuthorImg
-                src={imageUrlFor(buildImageObj(item.person.image))
-                  .width(100)
-                  .height(100)
-                  .fit('crop')
-                  .url()}
-                alt=''
-              />
-            )}
-            <div>
-              <span>By </span>
-              <strong>{(item.person && item.person.name) || <em>Missing</em>}</strong>
-            </div>
-          </li>
-        ))}
-      </ul>
+      {items.map(item => (
+        <div key={item._key}>
+          {item.person && item.person.image && item.person.image.asset && (
+            <StyledAuthorImg
+              src={imageUrlFor(buildImageObj(item.person.image))
+                .width(100)
+                .height(100)
+                .fit('crop')
+                .url()}
+              alt=''
+            />
+          )}
+          <div>
+            <span>By </span>
+            <strong>{(item.person && item.person.name) || <em>Missing</em>}</strong>
+          </div>
+        </div>
+      ))}
     </StyledRoleList>
   )
 }

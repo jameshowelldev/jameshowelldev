@@ -6,9 +6,9 @@ import BlockText from './block-text'
 
 function BlogPostPreview (props) {
   return (
-    <Link to={getBlogUrl(props.publishedAt, props.slug.current)}>
-      <div>
-        {props.mainImage && props.mainImage.asset && (
+    <div>
+      {props.mainImage && props.mainImage.asset && (
+        <Link to={getBlogUrl(props.publishedAt, props.slug.current)}>
           <img
             src={imageUrlFor(buildImageObj(props.mainImage))
               .width(600)
@@ -16,15 +16,15 @@ function BlogPostPreview (props) {
               .url()}
             alt={props.mainImage.alt}
           />
-        )}
-      </div>
-      <h3>{props.title}</h3>
+        </Link>
+      )}
+      <h3><Link to={getBlogUrl(props.publishedAt, props.slug.current)}>{props.title}</Link></h3>
       {props._rawExcerpt && (
         <div>
           <BlockText blocks={props._rawExcerpt} />
         </div>
       )}
-    </Link>
+    </div>
   )
 }
 
