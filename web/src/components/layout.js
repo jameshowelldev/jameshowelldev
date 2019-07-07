@@ -8,11 +8,22 @@ const GlobalStyle = createGlobalStyle`
     --sitePadding: 12px;
   }
 
+  @media screen and (min-width:768px) {
+    :root {
+      --sitePadding: 24px;
+    }
+  }
+
   body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: #ccc;
     font-size: 18px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4 {
+    margin-top: 0;
   }
 
   ul {
@@ -22,8 +33,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    line-height: 1.5;
     margin-top: 0;
+  }
+
+  a {
+    line-height: inherit;
+    color: #be46e2;
   }
 
   img{
@@ -32,12 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
   pre {
     overflow: scroll;
-  }
-
-  @media screen and (min-width:768px) {
-    :root {
-      --sitePadding: 24px;
-    }
+    border: 1px solid;
   }
 `
 const StyledPageGrid = styled.div`

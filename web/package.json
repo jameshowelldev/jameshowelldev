@@ -28,6 +28,7 @@
     "gatsby-source-sanity": "^4.0.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.5.0",
+    "prismjs": "^1.16.0",
     "react": "^16.8.0-alpha.0",
     "react-dom": "^16.8.0-alpha.0",
     "react-helmet": "^5.2.0",

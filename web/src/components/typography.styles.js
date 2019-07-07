@@ -5,7 +5,7 @@ const StyledH1 = styled.h1`
   margin: 0;
 
   @media screen and (min-width: 1280px){
-    font-size: 3.5rem;
+    font-size: 3.4rem;
   }
 `
 const StyledH2 = styled.h2`

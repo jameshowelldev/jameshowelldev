@@ -19,6 +19,10 @@ const StyledArticleContent = styled.div`
     list-style-type: disc;
     list-style-position: inside;
   }
+
+  > div {
+    overflow: auto;
+  }
 `
 
 const ArticleContent = ({ className, children }) => <StyledArticleContent>{children}</StyledArticleContent>

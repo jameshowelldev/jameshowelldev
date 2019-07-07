@@ -6,6 +6,7 @@ const StyledArticleHeading = styled(StyledH1)`
   position: relative;
   background-color: #ecd018;
   padding: 12px 48px 12px 48px;
+  line-height: 1.2;
   
   @media (min-width: 1440px){
     padding: 12px 48px 12px 0;

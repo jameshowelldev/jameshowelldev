@@ -50,7 +50,7 @@ const BlogPage = props => {
   return (
     <Layout>
       <SEO title='Blog' />
-      <Container>
+      <Container gutters='none'>
         <h1>Blog</h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </Container>

@@ -34,8 +34,12 @@ const StyledHeader = styled.header`
   align-items: center;
   box-sizing: border-box;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width:768px){
     padding: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 24px 0;
   }
 `
 

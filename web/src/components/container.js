@@ -23,10 +23,17 @@ const StyledContainer = styled.div`
       padding-bottom: 24px;
     `}
   }
+
+  @media screen and (min-width: 1440px){
+    ${props => props.gutters === 'none' && `
+      padding-left: 0;
+      padding-right: 0;
+    `}
+  }
 `
 
-const Container = ({ bgcolor, children, padding, className }) => {
-  return <StyledContainer className={className} bgcolor={bgcolor} padding={padding}>{children}</StyledContainer>
+const Container = ({ bgcolor, children, padding, className, gutters }) => {
+  return <StyledContainer className={className} bgcolor={bgcolor} padding={padding} gutters={gutters}>{children}</StyledContainer>
 }
 
 export default Container

@@ -29,9 +29,9 @@ const StyledNav = styled.nav`
 
 const StyledNavList = styled.ul`
   margin: 0;
-  padding: 0;
   list-style: none;
   display: none;
+  background-color: #000;
   
   @media screen and (min-width: 1024px){
     display: flex;
@@ -45,7 +45,7 @@ const StyledNavListItem = styled.li`
 
 const StyledNavItemLink = styled(Link)`
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   text-transform: uppercase;

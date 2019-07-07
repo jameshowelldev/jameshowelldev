@@ -37,7 +37,7 @@ const ContactPage = props => {
   return (
     <Layout>
       <SEO title={page.title} />
-      <Container>
+      <Container gutters='none'>
         <h1>{page.title}</h1>
         <BlockContent blocks={page._rawBody || []} />
       </Container>
