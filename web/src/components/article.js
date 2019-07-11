@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const StyledArticle = styled.article`
   display: grid;
-  grid-gap: 24px;
+  grid-gap: var(--siteSpacingMedium);
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas: "title" "image" "articlecontent" "related";

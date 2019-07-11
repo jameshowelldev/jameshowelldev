@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledArticleInfo = styled.div`
   @media screen and (max-width: 640px) {
     background-color: #000;
-    padding: 12px;
+    padding: var(--siteSpacingSmall);
     color: #fff;
   }
 `

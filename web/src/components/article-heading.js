@@ -5,11 +5,11 @@ import { StyledH1 } from './typography.styles'
 const StyledArticleHeading = styled(StyledH1)`
   position: relative;
   background-color: #ecd018;
-  padding: 12px 48px 12px 48px;
+  padding: var(--siteSpacingSmall) 48px var(--siteSpacingSmall) 48px;
   line-height: 1.2;
   
   @media (min-width: 1440px){
-    padding: 12px 48px 12px 0;
+    padding: var(--siteSpacingSmall) 48px var(--siteSpacingSmall) 0;
     &:before {
       content: '';
       display: block;

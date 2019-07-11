@@ -4,7 +4,7 @@ import BlogPostPreview from './blog-post-preview'
 
 const StyledBlogPostList = styled.ul`
   display: grid;
-  grid-gap:24px;
+  grid-gap: var(--siteSpacingSmall);
 
   @media screen and (min-width: 640px){
     grid-template-columns: 1fr 1fr;

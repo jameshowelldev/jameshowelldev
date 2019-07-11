@@ -6,6 +6,8 @@ import styled, { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   :root {
     --sitePadding: 12px;
+    --siteSpacingSmall: 12px;
+    --siteSpacingMedium: 24px;
   }
 
   @media screen and (min-width:768px) {

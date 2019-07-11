@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledArticleContent = styled.div`
   grid-area: articlecontent;
   display: grid;
-  grid-gap: 24px;
+  grid-gap: var(--siteSpacingMedium);
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: "articlemeta" "articletext";

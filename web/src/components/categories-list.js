@@ -6,8 +6,8 @@ const StyledCategoriesList = styled.ul`
     background-color: #ccc;
     padding: 5px;
     display: inline-block;
-    margin-right: 12px;
-    margin-top: 12px;
+    margin-right: var(--siteSpacingSmall);
+    margin-top: var(--siteSpacingSmall);
     font-size: 0.8rem;
   }
 `

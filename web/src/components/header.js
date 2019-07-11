@@ -28,18 +28,18 @@ const StyledHeader = styled.header`
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  padding: 12px;
+  padding: var(--siteSpacingSmall);
   width: 100%;
   display: flex;
   align-items: center;
   box-sizing: border-box;
 
   @media screen and (min-width:768px){
-    padding: 24px;
+    padding: var(--siteSpacingMedium);
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 24px 0;
+    padding: var(--siteSpacingMedium) 0;
   }
 `
 

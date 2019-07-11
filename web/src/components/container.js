@@ -7,20 +7,20 @@ const StyledContainer = styled.div`
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: var(--siteSpacingSmall);
+  padding-right: var(--siteSpacingSmall);
   ${props => props.padding === 'all' && `
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: var(--siteSpacingSmall);
+    padding-bottom: var(--siteSpacingSmall);
   `}
 
 
   @media screen and (min-width: 768px) {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--siteSpacingMedium);
+    padding-right: var(--siteSpacingMedium);
     ${props => props.padding === 'all' && `
-      padding-top: 24px;
-      padding-bottom: 24px;
+      padding-top: var(--siteSpacingMedium);
+      padding-bottom: var(--siteSpacingMedium);
     `}
   }
 

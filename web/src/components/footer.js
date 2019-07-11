@@ -5,7 +5,7 @@ import Container from './container'
 const StyledFooter = styled.footer`
   background-color: #000;
   color: #fff;
-  padding: 25px 0;
+  padding: var(--siteSpacingMedium) 0;
 `
 
 const Footer = () => (

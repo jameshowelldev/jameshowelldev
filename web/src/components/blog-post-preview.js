@@ -19,7 +19,7 @@ const StyledBlogPostPreview = styled.div`
   }
 
   .postHeading {
-    margin: 0 0 12px;
+    margin: 0 0 var(--siteSpacingSmall);
 
     a {
       font-size: 1.25rem;
@@ -28,7 +28,7 @@ const StyledBlogPostPreview = styled.div`
   }
 
   .postBody {
-    padding: 12px;
+    padding: var(--siteSpacingSmall);
   }
 `
 

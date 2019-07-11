@@ -5,7 +5,7 @@ const StyledArticleMeta = styled.div`
   grid-area: articlemeta;
   @media screen and (max-width: 640px) {
     background-color: #000;
-    padding: 12px;
+    padding: var(--siteSpacingSmall);
     color: #fff;
   }
 
