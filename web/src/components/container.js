@@ -7,22 +7,12 @@ const StyledContainer = styled.div`
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--siteSpacingSmall);
-  padding-right: var(--siteSpacingSmall);
+  padding-left: var(--siteSpacingMedium);
+  padding-right: var(--siteSpacingMedium);
   ${props => props.padding === 'all' && `
-    padding-top: var(--siteSpacingSmall);
-    padding-bottom: var(--siteSpacingSmall);
+    padding-top: var(--siteSpacingMedium);
+    padding-bottom: var(--siteSpacingMedium);
   `}
-
-
-  @media screen and (min-width: 768px) {
-    padding-left: var(--siteSpacingMedium);
-    padding-right: var(--siteSpacingMedium);
-    ${props => props.padding === 'all' && `
-      padding-top: var(--siteSpacingMedium);
-      padding-bottom: var(--siteSpacingMedium);
-    `}
-  }
 
   @media screen and (min-width: 1440px){
     ${props => props.gutters === 'none' && `

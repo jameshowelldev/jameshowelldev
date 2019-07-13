@@ -5,8 +5,12 @@ import { StyledH1 } from './typography.styles'
 const StyledArticleHeading = styled(StyledH1)`
   position: relative;
   background-color: #ecd018;
-  padding: var(--siteSpacingSmall) 48px var(--siteSpacingSmall) 48px;
+  padding: var(--siteSpacingSmall) var(--siteSpacingMedium) var(--siteSpacingSmall) var(--siteSpacingMedium);
   line-height: 1.2;
+
+  @media screen and (min-width: 640px) and (max-width: 1439px){
+    padding: var(--siteSpacingSmall) 48px var(--siteSpacingSmall) 48px;
+  }
   
   @media (min-width: 1440px){
     padding: var(--siteSpacingSmall) 48px var(--siteSpacingSmall) 0;
